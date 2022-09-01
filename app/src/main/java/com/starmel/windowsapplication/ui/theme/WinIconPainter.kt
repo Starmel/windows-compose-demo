@@ -76,6 +76,5 @@ private fun IconPreview() {
     Image(
         painter = rememberWindowIconPainter(R.drawable.netmeeting_0),
         contentDescription = null,
-//        modifier = Modifier.size(100.dp)
     )
 }

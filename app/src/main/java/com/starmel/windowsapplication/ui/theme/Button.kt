@@ -3,12 +3,16 @@ package com.starmel.windowsapplication.ui.theme
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.*
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
@@ -79,4 +83,16 @@ fun lastInteractionState(interactionSource: InteractionSource): State<Interactio
         }
     }
     return lastInteraction
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun ButtonPreview() {
+    Row {
+        Button(text = "Close", enabled = false) {
+        }
+        Spacer(modifier = Modifier.size(16.dp))
+        Button(text = "Ok") {
+        }
+    }
 }

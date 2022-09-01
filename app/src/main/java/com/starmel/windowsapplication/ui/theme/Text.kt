@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.starmel.windowsapplication.R
@@ -51,4 +52,10 @@ inline fun Text(
             )
         )
     }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun TextPreview() {
+    Text(text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
 }
